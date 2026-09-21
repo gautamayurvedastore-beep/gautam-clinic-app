@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/*
+  Design tokens ported 1:1 from DESIGN.md
+  ("AyurClinical Holistic Interface" design system).
+*/
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand */
+  --color-primary: #723421;
+  --color-primary-dark: #5d2a1a;
+  --color-on-primary: #ffffff;
+  --color-secondary: #4a5d4e;
+  --color-on-secondary: #ffffff;
+  --color-tertiary: #c28e5c;
+
+  /* Surfaces */
+  --color-surface: #f9f6f0;
+  --color-surface-raised: #ffffff;
+  --color-surface-subdued: #f2ece1;
+  --color-outline: #e5ddd0;
+  --color-input-border: #d8cfc2;
+
+  /* Content */
+  --color-ink: #2b211e;
+  --color-ink-muted: #635752;
+
+  /* Status */
+  --color-success: #3d6b52;
+  --color-success-bg: #e4efe8;
+  --color-danger: #9b2c2c;
+  --color-danger-bg: #fff5f5;
+
+  /* Radius */
+  --radius-field: 0.5rem;   /* buttons, inputs, badges */
+  --radius-card: 1.5rem;    /* clinical cards */
+  --radius-nested: 1rem;    /* internal groupings */
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* App shell: centers the phone-width UI on desktop, full-bleed on mobile */
+.app-shell {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background-color: var(--color-surface);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Safe-area padding for native builds (notch / home indicator) */
+.safe-top { padding-top: env(safe-area-inset-top); }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
