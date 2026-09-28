@@ -68,3 +68,17 @@ export const getPrescriptions = () =>
 
 export const getPrescriptionDetail = (id) =>
   apiRequest('prescription_detail.php', { method: 'GET', auth: true, params: { id } });
+
+/* ---------- Payments ---------- */
+
+export const createPaymentOrder = (payload) =>
+  apiRequest('create_payment_order.php', { method: 'POST', auth: true, body: payload });
+
+export const verifyAndBookAppointment = (orderId) =>
+  apiRequest('verify_and_book_appointment.php', { method: 'POST', auth: true, body: { order_id: orderId } });
+
+export const getPayments = () =>
+  apiRequest('payments_list.php', { method: 'GET', auth: true });
+
+export const getDateAvailability = (branchId, doctorId, days = 14) =>
+  apiRequest('date_availability.php', { method: 'GET', params: { branch_id: branchId, doctor_id: doctorId, days } });

@@ -168,5 +168,3 @@ Run `npm run dev -- --host`, then `npx cap sync`, then run the native app —
 it'll load straight from your dev server and hot-reload on the device.
 **Remove this `server.url` block before building the real release** or the
 app will try to load from your laptop instead of its bundled files.
-#   g a u t a m - c l i n i c - a p p  
- 

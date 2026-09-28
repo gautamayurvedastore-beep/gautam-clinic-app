@@ -2,7 +2,7 @@ import {
   Hospital, ArrowRight, ArrowLeft, HeartPulse, FileText, FlaskConical, Siren,
   Calendar, MapPin, CalendarClock, Stethoscope, ScrollText, User, CheckCircle2,
   Search, ShieldCheck, Eye, Plus, XCircle, Pencil, Check, Clock, Zap, BadgeCheck,
-  Bell, Home,
+  Bell, Home, IndianRupee, Lock, CreditCard, Ban,
 } from 'lucide-react';
 
 // Maps the icon names used throughout the app to a bundled lucide-react
@@ -36,6 +36,11 @@ const ICONS = {
   bolt: Zap,
   notifications: Bell,
   home: Home,
+  payments: IndianRupee,
+  rupee: IndianRupee,
+  lock: Lock,
+  card: CreditCard,
+  no_entry: Ban,
 };
 
 // Pulls an explicit "text-[20px]" size out of a className string, if present.
